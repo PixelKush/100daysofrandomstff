@@ -1,0 +1,38 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_012585E0 .scope module, "full_add" "full_add" 2 1;
+ .timescale 0 0;
+L_0125E298 .functor OR 1, L_01259250, L_0125E228, C4<0>, C4<0>;
+v01259150_0 .net "a", 0 0, C4<z>; 0 drivers
+v0125D7B8_0 .net "b", 0 0, C4<z>; 0 drivers
+v0125D810_0 .net "cin", 0 0, C4<z>; 0 drivers
+v0125D8C0_0 .net "cout", 0 0, L_0125E298; 1 drivers
+v0125DA20_0 .net "sum", 0 0, L_012592C0; 1 drivers
+v0125D600_0 .net "x", 0 0, L_012591A8; 1 drivers
+v0125D708_0 .net "y", 0 0, L_01259250; 1 drivers
+v0125D868_0 .net "z", 0 0, L_0125E228; 1 drivers
+S_01258910 .scope module, "h1" "half_add" 2 6, 2 12, S_012585E0;
+ .timescale 0 0;
+L_012591A8 .functor XOR 1, C4<z>, C4<z>, C4<0>, C4<0>;
+L_01259250 .functor AND 1, C4<z>, C4<z>, C4<1>, C4<1>;
+v01254078_0 .alias "a", 0 0, v01259150_0;
+v012540D0_0 .alias "b", 0 0, v0125D7B8_0;
+v01254128_0 .alias "c", 0 0, v0125D708_0;
+v012590F8_0 .alias "s", 0 0, v0125D600_0;
+S_012586F0 .scope module, "h2" "half_add" 2 7, 2 12, S_012585E0;
+ .timescale 0 0;
+L_012592C0 .functor XOR 1, L_012591A8, C4<z>, C4<0>, C4<0>;
+L_0125E228 .functor AND 1, L_012591A8, C4<z>, C4<1>, C4<1>;
+v012531B0_0 .alias "a", 0 0, v0125D600_0;
+v01253208_0 .alias "b", 0 0, v0125D810_0;
+v01253260_0 .alias "c", 0 0, v0125D868_0;
+v01254020_0 .alias "s", 0 0, v0125DA20_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "fulladder.v";
