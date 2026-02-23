@@ -1,0 +1,36 @@
+$date
+	Mon Feb 23 23:21:16 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module vector_tb $end
+$var wire 32 ! out [31:0] $end
+$var reg 8 " in [7:0] $end
+$scope module mut $end
+$var wire 8 # in [7:0] $end
+$var wire 32 $ out [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1000 $
+b1000 #
+b1000 "
+b1000 !
+$end
+#10000
+b10001000 "
+b10001000 #
+b11111111111111111111111110001000 !
+b11111111111111111111111110001000 $
+#20000
+b10001010 "
+b10001010 #
+b11111111111111111111111110001010 !
+b11111111111111111111111110001010 $
+#30000
